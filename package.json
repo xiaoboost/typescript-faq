@@ -1,0 +1,31 @@
+{
+    "name": "typescript-faq",
+    "version": "1.0.0",
+    "description": "typescript-faq",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "dev": "vuepress dev docs",
+        "build": "vuepress build docs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xiaoboost/typescript-faq.git"
+    },
+    "keywords": [
+        "typescript",
+        "vue"
+    ],
+    "author": "xiaoboost",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/xiaoboost/typescript-faq/issues"
+    },
+    "homepage": "https://github.com/xiaoboost/typescript-faq#readme",
+    "devDependencies": {
+        "@vuepress/plugin-back-to-top": "^1.2.0",
+        "@vuepress/plugin-search": "^1.2.0",
+        "vuepress": "^1.2.0"
+    }
+}
