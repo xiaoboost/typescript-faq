@@ -1,3 +1,4 @@
 .vscode
 _draft
+docs/.vuepress/dist
 node_modules

@@ -1,17 +1,18 @@
 {
-    "name": "typescript-faq",
+    "name": "typescript-tutorial",
     "version": "1.0.0",
-    "description": "typescript-faq",
+    "description": "TypeScript 入门常见问题详解",
     "directories": {
         "doc": "docs"
     },
     "scripts": {
-        "dev": "vuepress dev docs",
-        "build": "vuepress build docs"
+        "vuepress": "node ./node_modules/vuepress/cli.js",
+        "dev": "npm run vuepress dev docs",
+        "build": "npm run vuepress build docs"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/xiaoboost/typescript-faq.git"
+        "url": "git+https://github.com/xiaoboost/typescript-tutorial.git"
     },
     "keywords": [
         "typescript",
@@ -20,9 +21,9 @@
     "author": "xiaoboost",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/xiaoboost/typescript-faq/issues"
+        "url": "https://github.com/xiaoboost/typescript-tutorial/issues"
     },
-    "homepage": "https://github.com/xiaoboost/typescript-faq#readme",
+    "homepage": "https://github.com/xiaoboost/typescript-tutorial#readme",
     "devDependencies": {
         "@vuepress/plugin-back-to-top": "^1.2.0",
         "@vuepress/plugin-search": "^1.2.0",
