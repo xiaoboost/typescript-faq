@@ -1,6 +1,6 @@
 # TypeScript 教程
 
-![Github Pages](https://github.com/actions/typescript-tutorial/workflows/Github%20Pages/badge.svg)
+[![Actions Status](https://github.com/xiaoboost/typescript-tutorial/workflows/Github%20Pages/badge.svg)](https://github.com/xiaoboost/typescript-tutorial/actions)
 [![GitHub stars](https://img.shields.io/github/stars/xiaoboost/typescript-tutorial.svg?style=flat-square)](https://github.com/xiaoboost/typescript-tutorial/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/xiaoboost/typescript-tutorial.svg?style=flat-square)](https://github.com/xiaoboost/typescript-tutorial/issues)
 [![GitHub last commit](https://img.shields.io/github/last-commit/xiaoboost/typescript-tutorial.svg?style=flat-square)](https://github.com/xiaoboost/typescript-tutorial/commits/master)
