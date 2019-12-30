@@ -1,6 +1,13 @@
 module.exports = {
     title: 'Hello VuePress',
     description: 'Just playing around',
+    configureWebpack: (_, isServer) => {
+        return isServer ? {} : {
+            output: {
+                publicPath: './',
+            },
+        };
+    },
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
