@@ -1,13 +1,7 @@
 module.exports = {
     title: 'Hello VuePress',
     description: 'Just playing around',
-    configureWebpack: (_, isServer) => {
-        return isServer ? {} : {
-            output: {
-                publicPath: './',
-            },
-        };
-    },
+    base: '/typescript-tutorial/',
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
