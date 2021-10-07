@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>枚举与字面量的差异 | TypeScript FAQ</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/typescript-tutorial/image/logo.png">
+    <meta name="description" content="TypeScript 常见问题解答">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/typescript-tutorial/assets/css/0.styles.a5c7371d.css" as="style"><link rel="preload" href="/typescript-tutorial/assets/js/app.820715e4.js" as="script"><link rel="preload" href="/typescript-tutorial/assets/js/2.886cb477.js" as="script"><link rel="preload" href="/typescript-tutorial/assets/js/8.27be77b4.js" as="script"><link rel="prefetch" href="/typescript-tutorial/assets/js/3.22cae276.js"><link rel="prefetch" href="/typescript-tutorial/assets/js/4.b68e9f42.js"><link rel="prefetch" href="/typescript-tutorial/assets/js/5.fd9b7d47.js"><link rel="prefetch" href="/typescript-tutorial/assets/js/6.dbfc9227.js"><link rel="prefetch" href="/typescript-tutorial/assets/js/7.849b1432.js">
+    <link rel="stylesheet" href="/typescript-tutorial/assets/css/0.styles.a5c7371d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/typescript-tutorial/" class="home-link router-link-active"><img src="/typescript-tutorial/image/logo.png" alt="TypeScript FAQ" class="logo"> <span class="site-name can-hide">TypeScript FAQ</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/typescript-tutorial/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/xiaoboost/typescript-tutorial" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/typescript-tutorial/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/xiaoboost/typescript-tutorial" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/typescript-tutorial/enum/enum-literal.html" aria-current="page" class="active sidebar-link">枚举与字面量的差异</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/typescript-tutorial/enum/enum-literal.html#字符串枚举和字符串字面量" class="sidebar-link">字符串枚举和字符串字面量</a></li><li class="sidebar-sub-header"><a href="/typescript-tutorial/enum/enum-literal.html#数字枚举和数字字面量" class="sidebar-link">数字枚举和数字字面量</a></li><li class="sidebar-sub-header"><a href="/typescript-tutorial/enum/enum-literal.html#枚举和字面量的取舍" class="sidebar-link">枚举和字面量的取舍</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="枚举与字面量的差异"><a href="#枚举与字面量的差异" class="header-anchor">#</a> 枚举与字面量的差异</h1> <p>在 TypeScript / JavaScript 语言中，广义上的枚举类型其实就是指若干特定的常量。比如说我们常常在代码中使用的常量：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> left <span class="token operator">=</span> <span class="token string">'left'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> right <span class="token operator">=</span> <span class="token string">'right'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> down <span class="token operator">=</span> <span class="token string">'down'</span><span class="token punctuation">;</span>
+</code></pre></div><p>它们就可以称作是广义上的枚举类型了。到了 TypeScript 语言中，单独把枚举类型拿了出来作为基本的数据结构，那么<code>枚举</code>和<code>常量</code>区别在哪里呢？</p> <h2 id="字符串枚举和字符串字面量"><a href="#字符串枚举和字符串字面量" class="header-anchor">#</a> 字符串枚举和字符串字面量</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Direction <span class="token punctuation">{</span>
+  left <span class="token operator">=</span> <span class="token string">'left'</span><span class="token punctuation">,</span>
+  right <span class="token operator">=</span> <span class="token string">'right'</span><span class="token punctuation">,</span>
+  up <span class="token operator">=</span> <span class="token string">'up'</span><span class="token punctuation">,</span>
+  down <span class="token operator">=</span> <span class="token string">'down'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">setDirection1</span><span class="token punctuation">(</span>di<span class="token operator">:</span> Direction<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ..</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">setDirection2</span><span class="token punctuation">(</span>di<span class="token operator">:</span> <span class="token string">'left'</span> <span class="token operator">|</span> <span class="token string">'right'</span> <span class="token operator">|</span> <span class="token string">'up'</span> <span class="token operator">|</span> <span class="token string">'down'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ..</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">setDirection1</span><span class="token punctuation">(</span><span class="token string">'left'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// error</span>
+<span class="token function">setDirection1</span><span class="token punctuation">(</span>Direction<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setDirection2</span><span class="token punctuation">(</span><span class="token string">'left'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setDirection2</span><span class="token punctuation">(</span>Direction<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>上述的代码中可以看到，字符串枚举的类型检测要更为严格，必须是枚举变量本身，而字符串字面量类型则兼容性更好，值相同的字符串枚举也是可以的。</p> <h2 id="数字枚举和数字字面量"><a href="#数字枚举和数字字面量" class="header-anchor">#</a> 数字枚举和数字字面量</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Direction <span class="token punctuation">{</span>
+  left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  right<span class="token punctuation">,</span>
+  up<span class="token punctuation">,</span>
+  down<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">setDirection1</span><span class="token punctuation">(</span>di<span class="token operator">:</span> Direction<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ..</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">setDirection2</span><span class="token punctuation">(</span>di<span class="token operator">:</span> <span class="token number">0</span> <span class="token operator">|</span> <span class="token number">1</span> <span class="token operator">|</span> <span class="token number">2</span> <span class="token operator">|</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ..</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 以下四个函数均未报错 */</span>
+
+<span class="token function">setDirection1</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setDirection1</span><span class="token punctuation">(</span>Direction<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setDirection2</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setDirection2</span><span class="token punctuation">(</span>Direction<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>很明显可以看出数字和字符串最大的不同就是数字枚举的类型检测没有字符串那么严格，只要实际的值相等，那就可以兼容。</p> <h2 id="枚举和字面量的取舍"><a href="#枚举和字面量的取舍" class="header-anchor">#</a> 枚举和字面量的取舍</h2> <p>不管是枚举还是字面量常量，基本都是在各种状态量中使用，这类状态量都有个特点，就是其实它们并不关心这个状态值是多少，只需要能表示不同的状态就可以了。比如下面的情况：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">enum</span> Direction <span class="token punctuation">{</span>
+  left<span class="token punctuation">,</span>
+  right<span class="token punctuation">,</span>
+  up<span class="token punctuation">,</span>
+  down<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">setDirection1</span><span class="token punctuation">(</span>di<span class="token operator">:</span> Direction<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>di<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> Direction<span class="token punctuation">.</span>left<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ..</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">case</span> Direction<span class="token punctuation">.</span>right<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ..</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">case</span> Direction<span class="token punctuation">.</span>up<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ..</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">case</span> Direction<span class="token punctuation">.</span>down<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ..</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">setDirection2</span><span class="token punctuation">(</span>di<span class="token operator">:</span> <span class="token string">'left'</span> <span class="token operator">|</span> <span class="token string">'right'</span> <span class="token operator">|</span> <span class="token string">'up'</span> <span class="token operator">|</span> <span class="token string">'down'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>di<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token string">'left'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ..</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">case</span> <span class="token string">'right'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ..</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">case</span> <span class="token string">'up'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ..</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">case</span> <span class="token string">'down'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ..</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在上面的代码中，用于表示方向的状态量<code>di</code>在两种逻辑中都是成立的，因为我们实际上并不关心<code>di</code>的值到底是多少，我们只需要能区分开四种状态就行了。在这个意义上来说，内部的状态量我是推荐使用数字枚举的。因为对于程序来说，数字和字符串这两者，肯定是前者的内存要更小点，而且数字枚举是使用对象来实现的，对象字段名字也具有可读性，所以字面量在这方面的优势也不存在了。</p> <p>那么字面量就一无是处了嘛？也不是的，因为对于状态量而言，我们不关心枚举的具体值是多少，就意味着我们每次使用枚举的时候都必须要拿到枚举的原始对象，因为你并不清楚枚举值是否发生了改变。这就导致两段代码会因为这个枚举而耦合到一起。当你这个枚举状态到处都在用的时候，就非常有可能导致模块的耦合度过高，而很难分割。而对于字面量来说，由于它的值就是它的状态，所以两个模块是可以做到完全分离的。</p> <p>这两者并非是非此即彼的，判断好自己所处的情况，选择最好的方式就行。不过在具体的代码实践中，一般是推荐，在项目的内部模块中使用数字枚举，而在对外提供的接口中使用字符串字面量。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">10/7/2021, 1:56:51 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/typescript-tutorial/assets/js/app.820715e4.js" defer></script><script src="/typescript-tutorial/assets/js/2.886cb477.js" defer></script><script src="/typescript-tutorial/assets/js/8.27be77b4.js" defer></script>
+  </body>
+</html>
