@@ -1,32 +1,34 @@
 {
-    "name": "typescript-tutorial",
-    "version": "1.0.0",
-    "description": "TypeScript 入门常见问题详解",
-    "directories": {
-        "doc": "docs"
-    },
-    "scripts": {
-        "vuepress": "node ./node_modules/vuepress/cli.js",
-        "dev": "npm run vuepress dev docs",
-        "build": "npm run vuepress build docs"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/xiaoboost/typescript-tutorial.git"
-    },
-    "keywords": [
-        "typescript",
-        "vue"
-    ],
-    "author": "xiaoboost",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/xiaoboost/typescript-tutorial/issues"
-    },
-    "homepage": "https://github.com/xiaoboost/typescript-tutorial#readme",
-    "devDependencies": {
-        "@vuepress/plugin-back-to-top": "^1.2.0",
-        "@vuepress/plugin-search": "^1.2.0",
-        "vuepress": "^1.2.0"
-    }
+  "name": "typescript-tutorial",
+  "version": "1.0.0",
+  "description": "TypeScript 入门常见问题详解",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoboost/typescript-tutorial.git"
+  },
+  "keywords": [
+    "typescript",
+    "vue"
+  ],
+  "engines": {
+    "pnpm": ">= 6.0.0"
+  },
+  "author": "xiaoboost",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaoboost/typescript-tutorial/issues"
+  },
+  "homepage": "https://github.com/xiaoboost/typescript-tutorial#readme",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-search": "^1.8.2",
+    "vuepress": "^1.8.2"
+  }
 }
